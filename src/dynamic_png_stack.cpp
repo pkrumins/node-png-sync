@@ -56,7 +56,6 @@ DynamicPngStack::Initialize(Handle<Object> target)
     Local<FunctionTemplate> t = FunctionTemplate::New(New);
     t->InstanceTemplate()->SetInternalFieldCount(1);
     NODE_SET_PROTOTYPE_METHOD(t, "push", Push);
-    NODE_SET_PROTOTYPE_METHOD(t, "encode", PngEncodeAsync);
     NODE_SET_PROTOTYPE_METHOD(t, "encodeSync", PngEncodeSync);
     NODE_SET_PROTOTYPE_METHOD(t, "dimensions", Dimensions);
     target->Set(String::NewSymbol("DynamicPngStack"), t->GetFunction());
