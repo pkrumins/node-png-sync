@@ -11,7 +11,11 @@
                 "src/module.cpp",
                 "src/buffer_compat.cpp",
             ],
-            "include_dirs" : [ "gyp/include" ]
+            "include_dirs" : [ "gyp/include" ],
+            "libraries" : [
+                '<(module_root_dir)/gyp/lib/libpng.lib',
+                '<(module_root_dir)/gyp/lib/zlib.lib'
+            ]
         }
     ]
 }
