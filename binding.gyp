@@ -1,7 +1,7 @@
 {
     "targets": [
         {
-            "target_name": "png-sync",
+            "target_name": "binding",
             "sources": [
                 "src/common.cpp",
                 "src/png_encoder.cpp",
