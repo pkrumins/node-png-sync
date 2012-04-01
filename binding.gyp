@@ -11,10 +11,26 @@
                 "src/module.cpp",
                 "src/buffer_compat.cpp",
             ],
-            "include_dirs" : [ "gyp/include" ],
-            "libraries" : [
-                '<(module_root_dir)/gyp/lib/libpng.lib',
-                '<(module_root_dir)/gyp/lib/zlib.lib'
+            "conditions" : [
+                [
+                    'OS=="linux"', {
+                        "libraries" : [
+                            '-lpng',
+                            '-lz'
+                        ],
+                        'cflags!': [ '-fno-exceptions' ],
+                        'cflags_cc!': [ '-fno-exceptions' ]
+                    }
+                ],
+                [
+                    'OS=="win"', {
+                        "include_dirs" : [ "gyp/include" ],
+                        "libraries" : [
+                            '<(module_root_dir)/gyp/lib/libpng.lib',
+                            '<(module_root_dir)/gyp/lib/zlib.lib'
+                        ]
+                    }
+                ]
             ]
         }
     ]
