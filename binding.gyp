@@ -26,8 +26,8 @@
                     'OS=="win"', {
                         "include_dirs" : [ "gyp/include" ],
                         "libraries" : [
-                            '<(module_root_dir)/gyp/lib/libpng.dll.a',
-                            '<(module_root_dir)/gyp/lib/libz.dll.a'
+                            '<(module_root_dir)/gyp/lib/libpng.lib',
+                            '<(module_root_dir)/gyp/lib/libz.lib'
                         ]
                     }
                 ]
