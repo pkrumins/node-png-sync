@@ -1,6 +1,6 @@
 {
     "name": "png-sync",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "main":"./build/Release/binding",
     "description": "Same as node-png except it's sync and compiles on windows with node 0.6",
     "keywords": [
