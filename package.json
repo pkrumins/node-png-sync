@@ -28,7 +28,6 @@
         "node": ">=0.6.0"
     },
     "scripts": {
-        "install": "node-gyp configure && node-gyp build"
     }
 }
 
