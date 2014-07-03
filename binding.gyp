@@ -23,6 +23,19 @@
                     }
                 ],
                 [
+                    'OS=="mac"', {
+                        'xcode_settings': {
+                            'GCC_ENABLE_CPP_EXCEPTIONS': 'YES'
+                        },
+                        "libraries" : [
+                            '<!@(pkg-config libpng --libs)'
+                        ],
+                        "include_dirs": [
+                          "include", "../../installs/libpng-v1.4.4/include"
+                        ],
+                    }
+                ],
+                [
                     'OS=="win"', {
                         "include_dirs" : [ "gyp/include" ],
                         "libraries" : [
